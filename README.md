@@ -47,4 +47,5 @@ This repository contains an explanation to implement a simple fan check system t
 ![Build 3](/assets/build_3.jpg)
 ![Components](/assets/build_4.jpg)
 ![Build 5](/assets/build_5.jpg)
-![GPIO Pins](https://www.elektronik-kompendium.de/sites/raspberry-pi/bilder/raspberry-pi-gpio.png)
+![GPIO Pins](/assets/raspberry-pi-gpio.png)
+(https://www.elektronik-kompendium.de/sites/raspberry-pi/bilder/raspberry-pi-gpio.png)
