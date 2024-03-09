@@ -4,7 +4,7 @@ This repository contains an explanation to implement a simple fan check system t
 ## Getting Started
 - **Needed:** **Transistor** (to connect power when GPIO Pin sends signal), **Board**, **LED** (optional), **Resistor** (see image below)
 - Click here for [conversion table](https://learn.sparkfun.com/tutorials/resistors/decoding-resistor-markings)
-- The red cable is connected to the 5V (+) and the blue cable to the Ground (-)
+- The red cable is connected to the 5V (+) (also 3.3V possible for slower speed) and the blue cable to the Ground (-)
 - In this script, **GPIO PIN 11** is used. When the pin is enabled, it sends a signal (brown cable) to the LED which gets forwarded to the Transistor.
 - The Transistor then receives the signal and forwards the power through the black cable to the fan which toggles it
 - **Software:** Python3 & pip
