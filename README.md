@@ -11,12 +11,11 @@ This repository contains an explanation to implement a simple fan check system t
 
 
 ## Execution of temp check on every boot
-- ``python3 temp.py`` (If script is is in the same folder as the execution - For testing if it works)
-- Remove file ending, since it is executable without python3 command due to ``#!/usr/bin/env/python3``
+- ``python3 temp.py`` is the main script -> Remove file ending, it is executable without python3 command due to ``#!/usr/bin/env/python3``
 - Script must be moved to **/usr/local/bin** to be executable by simply writing the **filename**
   - ``sudo mv FILENAME /usr/local/bin/``  
   - ``sudo chmod +x /usr/local/bin/FILENAME`` - Add execution permission
-- For start of the script on boot of the raspberry_
+- To start the script on boot of Raspberry Pi:
   - Create ``**FILENAME**.sh`` script from repo
   - Move it to **/etc/init.d** and make it executable
     - ``sudo mv FILENAME.sh /etc/init.d/``
@@ -41,7 +40,7 @@ This repository contains an explanation to implement a simple fan check system t
 - ``checktemp.py`` - Displays temperature every few seconds (stop with ctrl + c)
 - ``test_led.py`` - Tests the LED of the board. The GPIO-PIN must be correct
 
-#### Platinen-Aufbau
+#### How To
 ![Build 1](/assets/build_1.jpg)  
 ![Build 2](/assets/build_2.jpg)  
 ![Build 3](/assets/build_3.jpg)
