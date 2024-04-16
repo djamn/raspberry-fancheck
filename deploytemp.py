@@ -2,9 +2,10 @@
 import subprocess
 import os
 import time
+import sys
 
 # VERSION CONTROL
-LATEST_VERSION = "2.3.0 (22/12/2023)"
+LATEST_VERSION = "2.4.0 (16/04/2024)"
 
 # CONFIG VALUES
 SOURCE_PATH = '/home/pi/'
@@ -15,8 +16,11 @@ print("**SCRIPT STARTED**\n\
 Specified file will be converted to file without ending, made executable & moved to", DESTINATION_PATH, "\n")
 print("[DEBUG] Latest Version:", LATEST_VERSION, "\n")
 
-# Prompts user to enter filename
-FILENAME_INPUT = input("Enter the file name with ending:\n")
+if len(sys.argv) > 1:
+    FILENAME_INPUT = sys.argv[1]
+    print("Received filename via argument:", FILENAME_INPUT)
+else:
+    FILENAME_INPUT = input("Enter the file name with ending:\n") # Prompts user to enter filename
 
 # Processing Values
 # Add filename with file extension to Source Path (/home/pi/test.py)
