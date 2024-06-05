@@ -12,10 +12,14 @@ This repository contains an explanation to implement a simple fan check system t
 
 ## Execution of temp check on every boot
 - ``python3 temp.py`` is the main script -> Remove file ending, it is executable without python3 command due to ``#!/usr/bin/env/python3``
-- Script must be moved to **/usr/local/bin** to be executable by simply writing the **filename**
-  - ``sudo mv FILENAME /usr/local/bin/``  
-  - ``sudo chmod +x /usr/local/bin/FILENAME`` - Add execution permission
-- To start the script on boot of Raspberry Pi:
+- Script must be moved to **/usr/local/bin** to be executable by simply writing the **filename** in the terminal.
+
+### How to
+  - ``sudo chmod +x /usr/local/bin/<FILENAME>.py`` - Add execution permission
+  - ``sudo mv <FILENAME>.py /usr/local/bin/<FILENAME>``  
+  > :warning: **Hint:** You can also just move the ``deploytemp.py`` script with this instruction, then execute it by typing ``deploytemp`` and insert the name (one at a time) of the files you want to move. (Check if files are encoded in **LF**!)
+
+- **To start the script on boot of Raspberry Pi:**
   - Create ``**FILENAME**.sh`` script from repo
   - Move it to **/etc/init.d** and make it executable
     - ``sudo mv FILENAME.sh /etc/init.d/``
