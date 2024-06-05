@@ -20,14 +20,14 @@ This repository contains an explanation to implement a simple fan check system t
   > :warning: **Hint:** You can also just move the ``deploytemp.py`` script with this instruction, then execute it by typing ``deploytemp`` and insert the name (one at a time) of the files you want to move. (Check if files are encoded in **LF**!)
 
 - **To start the script on boot of Raspberry Pi:**
-  - Create ``**FILENAME**.sh`` script from repo
+  - Create ``temp.sh`` script from repo
   - Move it to **/etc/init.d** and make it executable
-    - ``sudo mv FILENAME.sh /etc/init.d/``
-    - ``sudo chmod +x /etc/init.d/FILENAME.sh``
+    - ``sudo mv temp.sh /etc/init.d/``
+    - ``sudo chmod +x /etc/init.d/temp.sh``
   - Register script to be executed on boot:
-    -  ``sudo update-rc.d FILENAME.sh defaults``
+    -  ``sudo update-rc.d temp.sh defaults``
   - Reboot RaspberryPi or manuelly start the script:
-    - ``sudo /etc/init.d/FILENAME.sh start``
+    - ``sudo /etc/init.d/temp.sh start``
 
 > :warning: Files that are moved to **/usr/local/bin** must be encoded in **LF**, not CRLF, otherwise they are not executable.
 > **Fix (VSCode):** At the bottom right, change CRLF to LF
@@ -41,7 +41,7 @@ This repository contains an explanation to implement a simple fan check system t
 - ``temp.py`` - Main Script -> Fan-Check
 - ``temp.sh`` - Bootscript of **temp.py**
 - ``disabletempcheck.py`` - Fully disables temperature check. Can only be reenabled by rebooting
-- ``checktemp.py`` - Displays temperature every few seconds (stop with ctrl + c)
+- ``checktemp.py`` - Displays temperature every few seconds (stop with ctrl + c) [Needs: ``apt install python3-colorama``]
 - ``test_led.py`` - Tests the LED of the board. The GPIO-PIN must be correct
 
 #### How To
