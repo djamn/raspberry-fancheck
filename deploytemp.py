@@ -5,22 +5,21 @@ import time
 import sys
 
 # VERSION CONTROL
-LATEST_VERSION = "2.4.0 (16/04/2024)"
+LATEST_VERSION = "2.5.0 (06/06/2024)"
 
 # CONFIG VALUES
 SOURCE_PATH = '/home/pi/'
 DESTINATION_PATH = '/usr/local/bin/'
-TIME_VALUE = 1.2  # Delayvalue in seconds
+PROCESSING_TIME = 0.5 # Delayvalue in seconds
 
-print("**SCRIPT STARTED**\n\
-Specified file will be converted to file without ending, made executable & moved to", DESTINATION_PATH, "\n")
 print("[DEBUG] Latest Version:", LATEST_VERSION, "\n")
+print("Specified file will be converted to file without ending, made executable & moved to", DESTINATION_PATH, "\n")
 
 if len(sys.argv) > 1:
     FILENAME_INPUT = sys.argv[1]
     print("Received filename via argument:", FILENAME_INPUT)
 else:
-    FILENAME_INPUT = input("Enter the file name with ending:\n") # Prompts user to enter filename
+    FILENAME_INPUT = input(f"Enter the file name with ending (located in {SOURCE_PATH}):\n") # Prompts user to enter filename
 
 # Processing Values
 # Add filename with file extension to Source Path (/home/pi/test.py)
@@ -37,7 +36,7 @@ DESTINATION_PATH_FULL_WIHTOUT_EXTENSION = os.path.join(
     DESTINATION_PATH, FILENAME_WITHOUT_EXTENSION)
 
 print("Processing...")
-time.sleep(TIME_VALUE)
+time.sleep(PROCESSING_TIME)
 
 print("********************************************************************************")
 print("[DEBUG] Filename:", FILENAME_INPUT)
